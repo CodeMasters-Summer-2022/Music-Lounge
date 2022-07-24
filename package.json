@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Boilerplate for Vanilla JS Projects",
   "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html"
+    "start": "parcel src/*.html src/pages/admin/*.html",
+    "build": "parcel build src/*.html src/pages/admin/*.html"
   },
   "keywords": [
     "boilerplate",
