@@ -1,2 +1,29 @@
 // This document contains the styles that are global to all pages
 @use "./colors" as *;
+
+// Import google fonts
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: $white;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

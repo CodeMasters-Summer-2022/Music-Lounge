@@ -15,6 +15,12 @@
       content="A place where you can find information about a wide variety of music albums."
     />
 
+    <!-- Fontawesome import -->
+    <script
+      src="https://kit.fontawesome.com/a0058dad5f.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- User Styles -->
     <link rel="stylesheet" href="../../css/styles.css" />
 
@@ -22,8 +28,59 @@
     <script type="module" src="../../js/dashboard.js"></script>
   </head>
   <body>
-    <h1>Music Lounge - Admin Dashboard</h1>
-    <div id="app">
+    <header>
+      <h1 class="sr-only">Music Lounge - Admin Dashboard</h1>
+      <div class="mobile-top-search">
+        <button class="btn-menu" id="btnMenu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="mobile-sidenav__overlay" id="sideNavOverlay">
+        <nav class="mobile-sidenav" id="sideNav">
+          <h2 class="user-details">
+            <i class="fa-solid fa-circle-user"></i>
+            Anika G.
+          </h2>
+          <button class="btn-close" id="btnClose">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="mobile-menu-items">
+            <li>
+              <a href="#" class="mobile-menu-item">
+                <i class="fa-solid fa-user"></i>
+                Account
+              </a>
+            </li>
+            <li>
+              <a href="#" class="mobile-menu-item">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+              </a>
+            </li>
+            <li>
+              <button class="mobile-btn-logout" id="btnMobileLogout">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                Logout
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="add-album__container">
+        <button class="btn-add-album" id="btnAddAlbum">
+          <i class="fa-solid fa-plus"></i>
+          Add Album
+        </button>
+      </div>
+      <section class="manage-albums__container">
+        <h2>Manage Albums</h2>
+        <p><em>Add content here</em></p>
+      </section>
+    </main>
+    <!-- <div id="app">
       <ul v-cloak>
         <li
           v-for="(name, index) in names"
@@ -37,9 +94,9 @@
       <button v-if="selectedNameIndex !== null" @click="deleteUser">
         Delete {{names[selectedNameIndex]}}
       </button>
-    </div>
-    <!-- <script src="https://unpkg.com/vue@latest"></script> -->
+    </div> -->
+    <script src="https://unpkg.com/vue@latest"></script>
     <!-- For production, use -->
-    <script src="https://unpkg.com/vue@latest/dist/vue.global.prod.js"></script>
+    <!-- <script src="https://unpkg.com/vue@latest/dist/vue.global.prod.js"></script> -->
   </body>
 </html>
