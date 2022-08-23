@@ -188,4 +188,233 @@
   font-size: 1.5rem;
   font-weight: 800;
   color: $red;
+  margin-bottom: 1rem;
+}
+
+.albums-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.5rem;
+}
+
+.album-card {
+  text-align: center;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &:hover {
+    cursor: pointer;
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.album-poster__wrapper {
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.album-card img {
+  border-radius: 4px 4px 0 0;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+.album-card h3 {
+  color: $primary;
+  font-weight: 500;
+  padding: 0.5rem 1rem 0;
+}
+
+.album-card p {
+  color: $secondary;
+  font-size: 0.875rem;
+  padding: 0 1rem 0.75rem;
+}
+
+.album-card h3,
+.album-card p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.main-container {
+  margin-bottom: 8rem;
+}
+
+.mobile-main-nav__container {
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  background-color: $nav-bg;
+  border-top: 2px solid $primary;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.mobile-main-nav__navitem {
+  width: 25%;
+  border-right: 2px solid $primary;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.mobile-nav-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+    background-color: lighten($nav-bg, 15%);
+  }
+}
+
+.mobile-nav-button div {
+  transform: translateY(50%);
+  display: grid;
+  place-items: center;
+  color: $primary;
+}
+
+.mobile-nav-button i {
+  font-size: 1.75rem;
+}
+
+.mobile-nav-button span {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav-button:hover span {
+  transform: translateY(4px) scale(1.25);
+}
+
+.album-details__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  height: 100vh;
+  width: 0;
+  background-color: $album-details-bg;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.album-details__open {
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.btn-close-album {
+  top: 1.25rem;
+  left: 2.5rem;
+  font-size: 2rem;
+}
+
+.btn-edit-album {
+  top: 1.5rem;
+  right: 5rem;
+}
+
+.btn-delete-album {
+  top: 1.5rem;
+  right: 2.5rem;
+  color: $red;
+
+  &:hover {
+    color: lighten($red, 15%);
+  }
+}
+
+.btn-edit-album,
+.btn-delete-album {
+  font-size: 1.5rem;
+}
+
+.btn-close-album,
+.btn-edit-album {
+  &:hover {
+    color: lighten($primary, 15%);
+  }
+}
+
+.btn-edit-album,
+.btn-delete-album,
+.btn-close-album {
+  position: absolute;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.album-details__container .album-cover__wrapper {
+  width: 80%;
+  margin: 5rem auto 2rem;
+}
+
+.album-details__title {
+  color: $primary;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.album-details__artist {
+  color: $dark-brown;
+  font-size: 1.25rem;
+}
+
+.album-details__title,
+.album-details__artist {
+  text-align: center;
+}
+
+.album-details__misc {
+  display: flex;
+  margin: 2rem 0 2rem;
+  border-width: 2px 0 2px 0;
+  border-color: $primary;
+  border-style: solid;
+}
+
+.album-details__misc > li {
+  width: calc(100% / 3);
+  text-align: center;
+  border-right: 2px solid $primary;
+  padding: 1rem;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.album-details__misc h4 {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.album-details__desc {
+  padding: 0 1rem 1rem;
+}
+
+.album-details__desc h4 {
+  font-weight: 800;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.album-details__misc p,
+.album-details__desc p {
+  font-size: 1.125rem;
 }

@@ -68,7 +68,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main id="app" class="main-container">
       <div class="add-album__container">
         <button class="btn-add-album" id="btnAddAlbum">
           <i class="fa-solid fa-plus"></i>
@@ -77,24 +77,98 @@
       </div>
       <section class="manage-albums__container">
         <h2>Manage Albums</h2>
-        <p><em>Add content here</em></p>
+        <ul class="albums-container">
+          <li
+            class="album-card"
+            v-for="album in albumData"
+            :key="album.id"
+            :data-id="album.id"
+            @click="showAlbumDetails(album.id)"
+          >
+            <div class="album-poster__wrapper">
+              <img :src="album.imgUrl" :alt="album.title + 'Album Cover'" />
+            </div>
+            <h3>{{ album.title }}</h3>
+            <p>{{ album.artist }}</p>
+          </li>
+        </ul>
+        <section
+          class="album-details__container"
+          :class="albumDetailsVisible && 'album-details__open'"
+        >
+          <i
+            class="fa-solid fa-xmark btn-close-album"
+            @click="hideAlbumDetails"
+          ></i>
+          <i class="fa-solid fa-pen btn-edit-album"></i>
+          <i class="fa-solid fa-trash-can btn-delete-album"></i>
+          <div class="album-cover__wrapper">
+            <img
+              :src="selectedAlbum?.imgUrl"
+              :alt="selectedAlbum?.title + ' album cover.'"
+            />
+          </div>
+          <h3 class="album-details__title">{{ selectedAlbum?.title }}</h3>
+          <p class="album-details__artist">{{ selectedAlbum?.artist }}</p>
+          <ul class="album-details__misc">
+            <li>
+              <h4>Release</h4>
+              <p>{{ selectedAlbum?.release }}</p>
+            </li>
+            <li>
+              <h4>Genre</h4>
+              <p>{{ selectedAlbum?.genre }}</p>
+            </li>
+            <li>
+              <h4>Cost</h4>
+              <p>${{ selectedAlbum?.cost }}</p>
+            </li>
+          </ul>
+          <aside class="album-details__desc">
+            <h4>Description</h4>
+            <p>{{ selectedAlbum?.description }}</p>
+          </aside>
+        </section>
       </section>
     </main>
-    <!-- <div id="app">
-      <ul v-cloak>
-        <li
-          v-for="(name, index) in names"
-          :key="name"
-          @click="handleNameClick(index)"
-        >
-          {{ name }}
-        </li>
-      </ul>
-      <p v-if="names.length === 0">Loading...</p>
-      <button v-if="selectedNameIndex !== null" @click="deleteUser">
-        Delete {{names[selectedNameIndex]}}
-      </button>
-    </div> -->
+    <footer>
+      <nav>
+        <ul class="mobile-main-nav__container">
+          <li class="mobile-main-nav__navitem">
+            <a href="#" class="mobile-nav-button">
+              <div>
+                <i class="fa-solid fa-house-chimney"></i>
+                <span>Home</span>
+              </div>
+            </a>
+          </li>
+          <li class="mobile-main-nav__navitem">
+            <a href="#" class="mobile-nav-button">
+              <div>
+                <i class="fa-solid fa-music"></i>
+                <span>Songs</span>
+              </div>
+            </a>
+          </li>
+          <li class="mobile-main-nav__navitem">
+            <a href="#" class="mobile-nav-button">
+              <div>
+                <i class="fa-solid fa-compact-disc"></i>
+                <span>Albums</span>
+              </div>
+            </a>
+          </li>
+          <li class="mobile-main-nav__navitem">
+            <a href="#" class="mobile-nav-button">
+              <div>
+                <i class="fa-solid fa-microphone"></i>
+                <span>Artists</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
     <script src="https://unpkg.com/vue@latest"></script>
     <!-- For production, use -->
     <!-- <script src="https://unpkg.com/vue@latest/dist/vue.global.prod.js"></script> -->
