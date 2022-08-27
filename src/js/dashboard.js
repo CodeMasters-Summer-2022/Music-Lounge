@@ -108,7 +108,8 @@ const app = createApp({
       ],
       albumDetailsVisible: false,
       selectedAlbum: null,
-      isLoading: false
+      isLoading: false,
+      hasError: false
     }
   },
   methods: {
@@ -122,11 +123,18 @@ const app = createApp({
   },
   async mounted() {
     this.isLoading = true;
-    const response = await fetch("http://localhost:3000/albums");
-    const data = await response.json();
+    this.hasError = false;
 
-    if (response.ok && data) {
-      this.albumData = [...data];
+    try {
+      const response = await fetch("http://localhost:3000/albums");
+      const data = await response.json();
+
+      if (response.ok && data) {
+        this.albumData = [...data];
+      }
+    } catch (error) {
+      // this.hasError = true; TODO: Need to set this later
+      console.log(error.message);
     }
     this.isLoading = false;
   }

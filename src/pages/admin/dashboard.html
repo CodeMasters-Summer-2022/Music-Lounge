@@ -153,7 +153,7 @@
           </div>
           <h2>Manage Albums</h2>
         </div>
-        <ul class="albums-container" v-if="!isLoading" v-cloak>
+        <ul class="albums-container" v-if="!isLoading && !hasError" v-cloak>
           <li
             class="album-card"
             v-for="album in albumData"
@@ -168,7 +168,8 @@
             <p>{{ album.artist }}</p>
           </li>
         </ul>
-        <p v-else>Loading Albums...</p>
+        <p v-else-if="isLoading">Loading Albums...</p>
+        <p v-else>And error occurred while loading album data</p>
         <section
           class="album-details__container"
           :class="albumDetailsVisible && 'album-details__open'"
