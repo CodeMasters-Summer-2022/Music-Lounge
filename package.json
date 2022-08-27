@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Boilerplate for Vanilla JS Projects",
   "scripts": {
-    "start": "parcel src/*.html src/pages/admin/*.html",
-    "build": "parcel build src/*.html src/pages/admin/*.html"
+    "parcel-start": "parcel src/*.html src/pages/admin/*.html",
+    "build": "parcel build src/*.html src/pages/admin/*.html",
+    "jsonserver-start": "npx json-server --watch .\\src\\data\\db.json",
+    "start": "npm-run-all -p -r jsonserver-start parcel-start"
   },
   "keywords": [
     "boilerplate",
@@ -14,10 +16,19 @@
     "scss",
     "sass"
   ],
+  "staticFiles": {
+    "staticPath": "src/static",
+    "staticOutPath": "static"
+  },
   "author": "Deepak Joy Jose",
   "license": "ISC",
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "parcel": "^2.6.2",
+    "parcel-reporter-static-files-copy": "^1.4.0",
     "sass": "^1.50.1"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
   }
 }
