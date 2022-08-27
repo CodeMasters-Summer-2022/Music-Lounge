@@ -126,6 +126,10 @@ const app = createApp({
     this.hasError = false;
 
     try {
+      if (!window.location.origin.includes("localhost") && !window.location.origin.includes("127.0.0.1")) {
+        this.isLoading = false;
+        return;
+      }
       const response = await fetch("http://localhost:3000/albums");
       const data = await response.json();
 
