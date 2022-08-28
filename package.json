@@ -5,7 +5,7 @@
   "scripts": {
     "parcel-start": "parcel src/*.html src/pages/admin/*.html",
     "build": "parcel build src/*.html src/pages/admin/*.html",
-    "jsonserver-start": "npx json-server --watch .\\src\\data\\db.json",
+    "jsonserver-start": "npx json-server --watch ./src/data/db.json",
     "start": "npm-run-all -p -r jsonserver-start parcel-start"
   },
   "keywords": [
