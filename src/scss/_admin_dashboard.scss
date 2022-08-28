@@ -608,10 +608,12 @@
   }
 
   .search-bar__wrapper {
+    position: relative;
+
     &::after {
       content: "\f002";
       position: absolute;
-      top: 0.5rem;
+      top: 0.25rem;
       left: 1rem;
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
