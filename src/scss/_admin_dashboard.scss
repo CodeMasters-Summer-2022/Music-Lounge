@@ -392,6 +392,17 @@
 }
 
 .album-details__container {
+  &::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+}
+
+.album-details__content {
   position: fixed;
   top: 0;
   right: 0;
@@ -410,7 +421,7 @@
   }
 }
 
-.album-details__open {
+.album-details__open .album-details__content {
   width: 100%;
   overflow-y: auto;
 }
@@ -597,8 +608,6 @@
   }
 
   .search-bar__wrapper {
-    position: relative;
-
     &::after {
       content: "\f002";
       position: absolute;
@@ -617,14 +626,9 @@
 
   .album-details__open {
     &::before {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.7);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0; // top: 0 right: 0 bottom: 0 left: 0
       z-index: 10;
+      opacity: 1;
     }
   }
 }

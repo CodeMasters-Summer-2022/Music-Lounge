@@ -170,10 +170,12 @@
         </ul>
         <p v-else-if="isLoading">Loading Albums...</p>
         <p v-else>And error occurred while loading album data</p>
-        <section
-          class="album-details__container"
-          :class="albumDetailsVisible && 'album-details__open'"
-        >
+      </section>
+      <aside
+        class="album-details__container"
+        :class="albumDetailsVisible && 'album-details__open'"
+      >
+        <div class="album-details__content">
           <div class="album-details__btn--container">
             <div class="album-details__btn--left">
               <i
@@ -216,8 +218,8 @@
             <h4>Description</h4>
             <p>{{ selectedAlbum?.description }}</p>
           </aside>
-        </section>
-      </section>
+        </div>
+      </aside>
     </main>
     <footer class="mobile-footer">
       <nav>
