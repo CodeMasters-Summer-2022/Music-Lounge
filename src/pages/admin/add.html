@@ -14,14 +14,34 @@
       name="description"
       content="A place where you can find information about a wide variety of music albums."
     />
-
-    <!-- User Styles -->
-    <link rel="stylesheet" href="../../css/styles.css" />
-
-    <!-- Import JavaScript files -->
-    <script type="module" src="../../js/add.js"></script>
+    <!-- User Styles --> <link rel="stylesheet" href="../../css/styles.css" />
+    <!-- Font Awesome --> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <!-- Import JavaScript files --> <script type="module" src="../../js/add.js"></script>
   </head>
   <body>
-    <h1>Music Lounge - Admin Add Album</h1>
+    <h1 class="sr-only">Music Lounge - Admin Add Album</h1>
+    <div class="mobile-addAlbum">
+      <h1>Add Album</h1>
+
+      <div class="mobile-imageContainer">
+        <div class="display-image"></div>
+        
+        <label for="image-input">
+          <i class="fa-solid fa-camera"></i>
+          <br>
+          Upload Cover
+          <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+        </label>
+
+      </div>
+       
+
+
+    
+    
+    </div>
+
+
+
   </body>
 </html>

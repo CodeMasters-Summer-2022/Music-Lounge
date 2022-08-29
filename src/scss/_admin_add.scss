@@ -1,1 +1,50 @@
 @use "./colors" as *;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: $red;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+
+.mobile-imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.display-image {
+    width: 225px;
+    height: 225px;
+    border: 1px solid #D8DFE1;
+    background-color: #D8DFE1;
+    background-position: center;
+    background-size: cover;
+    margin: 2rem auto;
+}
+
+
+label{
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #002C3A;
+  border-style: dotted;
+  padding: 1.5rem 6rem;
+  i{
+    font-size: 1.8rem;
+  }
+
+  input{
+    display: none;
+  }  
+ 
+}
