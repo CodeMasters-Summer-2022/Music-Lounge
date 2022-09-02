@@ -19,27 +19,132 @@
     <!-- Import JavaScript files --> <script type="module" src="../../js/add.js"></script>
   </head>
   <body>
-    <h1 class="sr-only">Music Lounge - Admin Add Album</h1>
+<!-- Main -->
     <div class="mobile-addAlbum">
       <h1>Add Album</h1>
-
-      <div class="mobile-imageContainer">
+      <div class="addAlbum-Container">
+        <div class="innerContainer">
+           <!-- image section start -->
+       <div class="imageSection">
         <div class="display-image"></div>
-        
-        <label for="image-input">
+        <label for="image-input" >
           <i class="fa-solid fa-camera"></i>
           <br>
           Upload Cover
           <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
         </label>
-
+       </div>
+        <!-- image section end -->
+        <!-- form section start -->
+        <div class="formSection">
+          <form>
+            <label for="albumName">Album Name</label>
+            <input type="text" id="albumName" name="album_name">
+            <br>
+            <label for="artistName">Artist Name</label>
+            <input type="text" id="artistName" name="artist_name">
+            <br>
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" name="genre">
+            <br>
+            <div class="field-container">
+              <div class="release">
+                <label for="release">Release</label>
+                <input type="text" id="release" name="release">
+              </div>
+              <div class="cost">
+                <label for="release">Cost</label>
+                <input type="text" id="cost" name="cost">
+              </div>
+            </div>
+            <br>
+            <label for="desc">Description</label>
+           <input type="text" id="desc" name="desc">
+          </form>
+        </div>
+        <!-- form section end -->
+        </div>
+       <!-- innerContainer end -->
+        <!-- Button start -->
+        <div class="mobile-btn">
+          <button class="btn-cancel">Cancel</button>
+          <button class="btn-save">Save</button>
+        </div>
+        <!-- Button end -->
       </div>
-       
-
-
-    
-    
     </div>
+<!-- Main End -->
+
+<!-- Navbar -->
+<header class="desktop-header">
+  <div class="logo-container">
+    <a href="../../index.html">
+      <img
+        src="../../static/icons/logo.svg"
+        alt="Music Lounge Logo"
+        class="logo"
+      />
+    </a>
+  </div>
+  <nav class="desktop-main-nav">
+    <ul class="nav-top">
+      <li class="main-nav__navitem">
+        <a href="#" class="nav-button">
+          <div>
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+        </a>
+        <span class="nav-button__label">Home</span>
+      </li>
+      <li class="main-nav__navitem">
+        <a href="#" class="nav-button">
+          <div>
+            <i class="fa-solid fa-music"></i>
+          </div>
+        </a>
+        <span class="nav-button__label">Songs</span>
+      </li>
+      <li class="main-nav__navitem">
+        <a href="#" class="nav-button">
+          <div>
+            <i class="fa-solid fa-compact-disc"></i>
+          </div>
+        </a>
+        <span class="nav-button__label">Albums</span>
+      </li>
+      <li class="main-nav__navitem">
+        <a href="#" class="nav-button">
+          <div>
+            <i class="fa-solid fa-microphone"></i>
+          </div>
+        </a>
+        <span class="nav-button__label">Artists</span>
+      </li>
+    </ul>
+    <ul class="nav-bottom">
+      <li class="main-nav__navitem">
+        <a href="#" class="nav-button">
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <span class="nav-button__label">Account</span>
+      </li>
+      <li class="main-nav__navitem">
+        <a href="#" class="nav-button">
+          <i class="fa-solid fa-gear"></i>
+        </a>
+        <span class="nav-button__label">Settings</span>
+      </li>
+      <li class="main-nav__navitem">
+        <button class="btn-logout nav-button">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </button>
+        <span class="nav-button__label">Logout</span>
+      </li>
+    </ul>
+  </nav>
+</header>
+<!-- Navbar  End-->
+
 
 
 
