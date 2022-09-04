@@ -29,6 +29,7 @@
     "sass": "^1.50.1"
   },
   "dependencies": {
+    "firebase": "^9.9.4",
     "json-server": "^0.17.0"
   }
 }
