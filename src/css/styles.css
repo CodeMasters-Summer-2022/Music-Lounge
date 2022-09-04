@@ -1055,5 +1055,347 @@ h6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.login,
+.register {
+  width: 100%;
+  height: 100%;
+}
+
+.login {
+  background-color: #ffffff;
+  text-align: center;
+}
+.login .login-container {
+  margin: 3rem;
+  text-align: center;
+}
+.login h1 {
+  margin-bottom: 3rem;
+  padding-right: 3rem;
+  font-size: 1.6rem;
+}
+.login input[type=email],
+.login input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: #eeeeef;
+}
+.login input[type=checkbox] {
+  margin-right: 5px;
+}
+.login .check {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.login a {
+  text-decoration: underline;
+  color: rgba(211, 77, 75, 0.8784313725);
+}
+.login button {
+  width: 100%;
+  margin: 30px 0;
+  padding: 10px;
+  border: none;
+  background-color: #d34e4b;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.login .btn-reg {
+  background-color: #002c3a;
+}
+.login hr {
+  width: 30%;
+  display: inline-block;
+}
+.login p {
+  width: 100%;
+  display: inline-block;
+}
+.login ul {
+  list-style: none;
+  margin: 2rem 0;
+}
+.login ul li {
+  display: inline-block;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.login ul li:hover {
+  opacity: 0.6;
+}
+.login ul li:last-child {
+  margin-right: 0;
+}
+.login .copyright {
+  display: inline-block;
+  float: none;
+}
+
+.register {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+  }
+  .container .login,
+.container .register {
+    width: 50%;
+  }
+  .container .login {
+    height: 100%;
+    text-align: center;
+    padding-top: 3rem;
+  }
+  .container .login .login-container {
+    margin: 6rem;
+    text-align: center;
+  }
+  .container .login h1 {
+    font-size: 2.5rem;
+  }
+  .container .login a {
+    color: #000;
+    transition: 0.1s all ease-in-out;
+  }
+  .container .login a:hover {
+    color: #d34e4b;
+  }
+  .container .login button {
+    transition: 0.3s all ease-in-out;
+  }
+  .container .login button:hover {
+    width: 97%;
+    font-size: 22px;
+    border-radius: 5px;
+  }
+  .container .login p {
+    width: 30%;
+    display: inline-block;
+  }
+  .container .register {
+    background: linear-gradient(146.47deg, rgba(255, 187, 124, 0.96) 0%, #cc4b54 76.71%);
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    padding-top: 3rem;
+  }
+  .container .register .register-container {
+    margin: 7rem auto;
+    text-align: center;
+  }
+  .container .register h2 {
+    margin: 2.5rem 0;
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+  .container .register p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .container .register button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.2s all ease-in-out;
+  }
+  .container .register button:hover {
+    color: #d34e4b;
+    background-color: #fff;
+    cursor: pointer;
+  }
+
+  .register {
+    display: flex;
+  }
+
+  .btn-reg {
+    display: none;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #be0000;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.addAlbum-Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.addAlbum-Container .imageSection {
+  margin: 0 1.2rem;
+  margin-bottom: 2rem;
+}
+.addAlbum-Container .imageSection .display-image {
+  width: 225px;
+  height: 225px;
+  border: 1px solid #d8dfe1;
+  background-color: #d8dfe1;
+  background-position: center;
+  background-size: cover;
+  margin: 3rem auto;
+}
+.addAlbum-Container .imageSection label {
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #002c3a;
+  border-style: dotted;
+  padding: 2rem 7rem;
+  margin: 0 4rem;
+}
+.addAlbum-Container .imageSection label i {
+  font-size: 1.8rem;
+}
+.addAlbum-Container .imageSection label input {
+  display: none;
+}
+.addAlbum-Container .formSection form {
+  display: inline-block;
+  margin: 20px 1.5rem;
+}
+.addAlbum-Container .formSection form input {
+  width: 100%;
+  padding: 8px 0;
+  font-size: 16px;
+  color: #002c3a;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+.addAlbum-Container .formSection form label {
+  color: #002c3a;
+}
+.addAlbum-Container .formSection form .field-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.addAlbum-Container .mobile-btn {
+  margin: 2rem auto;
+}
+.addAlbum-Container .mobile-btn .btn-cancel {
+  background-color: white;
+  border: 1px solid #002c3a;
+  color: #002c3a;
+  padding: 0.3rem 2rem;
+  cursor: pointer;
+}
+.addAlbum-Container .mobile-btn .btn-save {
+  background-color: #002c3a;
+  color: white;
+  border: none;
+  padding: 0.4rem 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.desktop-header {
+  display: none;
+  border-right: 2px solid #002c3a;
+}
+
+@media only screen and (min-width: 1024px) {
+  .desktop-header {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 6.75rem;
+    min-height: 100vh;
+    background-color: #d8dfe1;
+  }
+
+  h1 {
+    font-size: clamp(1.3rem, 2.5vw, 3rem);
+    margin-bottom: 0;
+    margin-left: 5rem;
+  }
+
+  .imageSection .display-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .mobile-addAlbum {
+    margin: 3rem 3rem 3rem 8rem;
+  }
+
+  .addAlbum-Container {
+    margin: 3rem 5rem;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .innerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5rem;
+    padding: 2rem;
+  }
+
+  .formSection {
+    font-size: clamp(0.5rem, 1.2vw, 2rem);
+  }
+
+  .btn-cancel {
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+    margin-right: 5rem;
+  }
+
+  .btn-save {
+    padding: 2rem 5rem;
+    font-size: 1.5rem;
+  }
+
+  label {
+    font-size: clamp(1.2rem, 1vw, 2rem);
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
