@@ -442,6 +442,15 @@ h6 {
   display: none;
 }
 
+.toastify {
+  padding-right: 3rem !important;
+}
+
+button.toast-close {
+  position: absolute;
+  right: 0.5rem;
+}
+
 .mobile-top-search {
   position: relative;
   margin-top: 1.5rem;
