@@ -5,8 +5,7 @@ import {
   getDownloadURL
 } from "firebase/storage";
 import { db, storage } from "./libs/firebaseConfig";
-import Toastify from "toastify-js";
-import "toastify-js/src/toastify.css";
+import { showNotification } from "./libs/utils";
 
 // Show image preview when an image is selected
 const imageInput = document.querySelector("#imageInput");
@@ -45,7 +44,7 @@ function handleSave(e) {
   };
 
   if (!validateInputs(newAlbum)) {
-    showNotification("Please fill all album details", "error");
+    showNotification("Please fill all album details & add an album cover", "error");
     return;
   }
 
@@ -105,21 +104,4 @@ async function savenewAlbum({
       console.log(err.message);
       showNotification("Album could not be added", "error");
     });
-}
-
-// Display success/error notifications
-function showNotification(message, type = "success") {
-  Toastify({
-    text: message,
-    duration: 3000,
-    newWindow: true,
-    close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "center", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
-    style: {
-      background: `${type === "error" ? "crimson" : "#00b09b"}`
-    },
-    onClick: function () { } // Callback after click
-  }).showToast();
 }

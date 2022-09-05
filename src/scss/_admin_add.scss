@@ -16,14 +16,13 @@ h1 {
 }
 
 .addAlbum-Container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
   .imageSection {
-    margin: 0 1.2rem;
-    margin-bottom: 2rem;
+    margin: 0 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
     .display-image {
       width: 225px;
       height: 225px;
@@ -90,6 +89,8 @@ h1 {
   .mobile-btn {
     margin: 0 auto;
     display: flex;
+    justify-content: center;
+    gap: 0 1rem;
 
     .btn-cancel {
       background-color: white;
@@ -131,7 +132,9 @@ h1 {
     margin-bottom: 0;
     margin-left: 5rem;
   }
-  .imageSection {
+  .addAlbum-Container .imageSection {
+    margin-top: 2rem;
+
     .display-image {
       width: 300px;
       height: 300px;
@@ -139,7 +142,7 @@ h1 {
   }
   .mobile-addAlbum {
     margin: 3rem 3rem 3rem 11.625rem;
-    width: 100%;
+    width: calc(100% - 11.625rem);
   }
   .addAlbum-Container {
     margin: 2rem 5rem 1rem;
@@ -148,18 +151,22 @@ h1 {
   .innerContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 5rem;
+    justify-content: space-between;
+    gap: 3rem;
     padding: 2rem;
   }
   .formSection {
     font-size: clamp(0.5rem, 1.2vw, 2rem);
   }
 
+  .imageSection,
+  .formSection {
+    width: calc((100% - 3rem) / 2);
+  }
+
   .btn-cancel {
     padding: 2rem 3rem;
     font-size: 1.5rem;
-    margin-right: 5rem;
   }
 
   .btn-save {
