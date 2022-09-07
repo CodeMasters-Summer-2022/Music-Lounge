@@ -1,1 +1,6 @@
-console.log("Welcome to Admin Login page");
+import { auth } from "./libs/firebaseConfig";
+import {signInWithEmailAndPassword} from "firebase/auth";
+
+
+console.log(auth);
+
