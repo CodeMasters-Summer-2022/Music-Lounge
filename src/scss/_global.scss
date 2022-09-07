@@ -31,3 +31,12 @@ h6 {
 [v-cloak] {
   display: none;
 }
+
+.toastify {
+  padding-right: 3rem !important;
+}
+
+button.toast-close {
+  position: absolute;
+  right: 0.5rem;
+}

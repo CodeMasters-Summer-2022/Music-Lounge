@@ -403,6 +403,18 @@ table th {
   text-align: left;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -440,6 +452,15 @@ h6 {
 
 [v-cloak] {
   display: none;
+}
+
+.toastify {
+  padding-right: 3rem !important;
+}
+
+button.toast-close {
+  position: absolute;
+  right: 0.5rem;
 }
 
 .mobile-top-search {
@@ -1055,13 +1076,7 @@ h6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
+.login-body {
   background: #ffffff;
   display: flex;
   justify-content: center;
@@ -1258,15 +1273,12 @@ h1 {
   margin-left: 2rem;
 }
 
-.addAlbum-Container {
+.addAlbum-Container .imageSection {
+  margin: 0 1.2rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-.addAlbum-Container .imageSection {
-  margin: 0 1.2rem;
-  margin-bottom: 2rem;
 }
 .addAlbum-Container .imageSection .display-image {
   width: 225px;
@@ -1284,6 +1296,7 @@ h1 {
   border-style: dotted;
   padding: 2rem 7rem;
   margin: 0 4rem;
+  white-space: nowrap;
 }
 .addAlbum-Container .imageSection label i {
   font-size: 1.8rem;
@@ -1295,16 +1308,20 @@ h1 {
   display: inline-block;
   margin: 20px 1.5rem;
 }
-.addAlbum-Container .formSection form input {
+.addAlbum-Container .formSection form input,
+.addAlbum-Container .formSection form textarea {
   width: 100%;
-  padding: 8px 0;
+  padding: 0.5rem 1rem;
   font-size: 16px;
   color: #002c3a;
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #002c3a;
   outline: none;
   background: transparent;
+}
+.addAlbum-Container .formSection form textarea {
+  border: 1px solid #002c3a;
 }
 .addAlbum-Container .formSection form label {
   color: #002c3a;
@@ -1315,7 +1332,10 @@ h1 {
   gap: 2rem;
 }
 .addAlbum-Container .mobile-btn {
-  margin: 2rem auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 0 1rem;
 }
 .addAlbum-Container .mobile-btn .btn-cancel {
   background-color: white;
@@ -1329,7 +1349,6 @@ h1 {
   color: white;
   border: none;
   padding: 0.4rem 2.5rem;
-  margin-left: 2rem;
   cursor: pointer;
 }
 
@@ -1356,25 +1375,29 @@ h1 {
     margin-left: 5rem;
   }
 
-  .imageSection .display-image {
+  .addAlbum-Container .imageSection {
+    margin-top: 2rem;
+  }
+  .addAlbum-Container .imageSection .display-image {
     width: 300px;
     height: 300px;
   }
 
   .mobile-addAlbum {
-    margin: 3rem 3rem 3rem 8rem;
+    margin: 3rem 3rem 3rem 11.625rem;
+    width: calc(100% - 11.625rem);
   }
 
   .addAlbum-Container {
-    margin: 3rem 5rem;
+    margin: 2rem 5rem 1rem;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
   }
 
   .innerContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    gap: 5rem;
+    justify-content: space-between;
+    gap: 3rem;
     padding: 2rem;
   }
 
@@ -1382,10 +1405,14 @@ h1 {
     font-size: clamp(0.5rem, 1.2vw, 2rem);
   }
 
+  .imageSection,
+.formSection {
+    width: calc((100% - 3rem) / 2);
+  }
+
   .btn-cancel {
     padding: 2rem 3rem;
     font-size: 1.5rem;
-    margin-right: 5rem;
   }
 
   .btn-save {

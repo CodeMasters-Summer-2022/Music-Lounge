@@ -6,13 +6,13 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.STOREFRONT_FIREBASE_API_KEY,
-  authDomain: process.env.STOREFRONT_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.STOREFRONT_FIREBASE_DATABASE_URL,
-  projectId: process.env.STOREFRONT_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.STOREFRONT_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.STOREFRONT_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.STOREFRONT_FIREBASE_APP_ID
+  apiKey: process.env.MUSIC_LOUNGE_FIREBASE_API_KEY,
+  authDomain: process.env.MUSIC_LOUNGE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.MUSIC_LOUNGE_FIREBASE_DATABASE_URL,
+  projectId: process.env.MUSIC_LOUNGE_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.MUSIC_LOUNGE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.MUSIC_LOUNGE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.MUSIC_LOUNGE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase Services
