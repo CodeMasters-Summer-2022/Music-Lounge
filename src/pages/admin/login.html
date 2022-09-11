@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Music Lounge - Login</title>
-    <meta
-      name="author"
-      content="CodeMasters | https://github.com/CodeMasters-Summer-2022 on Github"
-    />
-    <meta
-      name="description"
-      content="A place where you can find information about a wide variety of music albums."
-    />
+        <title>Music Lounge - Login</title>
+        <meta
+            name="author"
+            content="CodeMasters | https://github.com/CodeMasters-Summer-2022 on Github"
+        />
+        <meta
+            name="description"
+            content="A place where you can find information about a wide variety of music albums."
+        />
 
-    <!-- User Styles -->
-    <link rel="stylesheet" href="../../css/styles.css" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-    />
-    <!-- Import JavaScript files -->
-    <script type="module" src="../../js/login.js"></script>
-  </head>
+        <!-- User Styles -->
+        <link rel="stylesheet" href="../../css/styles.css" />
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        />
+        <!-- Import JavaScript files -->
+        <script type="module" src="../../js/login.js"></script>
+    </head>
 
-  <body class="login-body">
-    <div class="container">
-      <div class="login">
-        <div class="login-container">
-          <h1>Log in</h1>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" /><br />
-          <div class="check">
-            <div><input type="checkbox" /><span>Remember me</span></div>
+    <body class="login-body">
+        <div class="container">
+            <div class="login">
+                <div class="login-container">
+                    <form class="loginForm">
+                        <h1>Log in</h1>
+                        <input type="email" placeholder="Email" name="email" />
+                        <input type="password" placeholder="Password" name="password"/><br />
+                        <div class="check">
+                            <div>
+                                <input type="checkbox" /><span
+                                    >Remember me</span
+                                >
+                            </div>
+                        </div>
 
-            <a href="#">Forgot password?</a>
-          </div>
+                        <button>Log In</button>
+                    </form>
 
-          <button>Log In</button>
-          <button class="btn-reg">Register</button>
+                    <!-- <button class="btn-reg">Register</button> -->
 
-          <hr />
-          <p>Or Connect With</p>
-          <hr />
-          <ul>
-            <li><i class="fab fa-facebook fa-2x"></i></li>
-            <li><i class="fab fa-twitter fa-2x"></i></li>
-            <li><i class="fab fa-github fa-2x"></i></li>
-            <li><i class="fab fa-linkedin-in fa-2x"></i></li>
-          </ul>
-          <div class="clearfix"></div>
-          <span class="copyright">&copy;2019</span>
+                    <hr />
+                    <p>Or Connect With</p>
+                    <hr />
+                    <ul>
+                        <li><i class="fab fa-facebook fa-2x"></i></li>
+                        <li><i class="fab fa-twitter fa-2x"></i></li>
+                        <li><i class="fab fa-github fa-2x"></i></li>
+                        <li><i class="fab fa-linkedin-in fa-2x"></i></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <span class="copyright">&copy;2019</span>
+                </div>
+            </div>
+            <div class="register">
+                <div class="register-container">
+                    <i class="fas fa-user-plus fa-5x"></i>
+                    <h2>Hello,friend!</h2>
+                    <p>Enter your personal details and start journey with us</p>
+                    <!-- <button>Register <i class="fas fa-arrow-circle-right"></i></button> -->
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="register">
-        <div class="register-container">
-          <i class="fas fa-user-plus fa-5x"></i>
-          <h2>Hello,friend!</h2>
-          <p>Enter your personal details and start journey with us</p>
-          <button>Register <i class="fas fa-arrow-circle-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
